@@ -19,7 +19,7 @@ export const ItemDetailContainer = () => {
         });
     }, [id]);
 
-    if(!product) return <div>Loading...</div>;
+    if(!product) return <div>Loading product...</div>;
 
     return (
         <Container className='mt-4'> 
