@@ -1,13 +1,32 @@
+import  { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
-import PropTypes from 'prop-types';
 
+import { ItemList } from './ItemList';
+import { useParams } from 'react-router-dom';
 
-export const ItemListContainer = ({ greeting }) => (
-    <Container className='mt-4'>
-      <h2>{greeting}</h2>
-    </Container>
-  );
-  
-  ItemListContainer.propTypes = {
-    greeting: PropTypes.string.isRequired,
-  };
+import data from '../data/products.json';
+
+export const ItemListContainer = () => {
+    const [products, setProducts] = useState([]);
+    const { id } = useParams();
+
+    useEffect(() => {
+        const get = new Promise((resolve, reject) => {
+            setTimeout(() => resolve(data), 2000);
+        });
+
+        get.then((data) => {
+            if(!id){
+                setProducts(data);
+            }else{
+                const filtered = data.filter(p => p.categoria === id);
+                setProducts(filtered);
+            }
+            
+        });
+    }, [id]);
+
+    return (
+        <Container className='mt-4'> <ItemList products={products} /> </Container>
+    );
+};
