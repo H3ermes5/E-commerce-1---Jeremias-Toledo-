@@ -1,6 +1,7 @@
 [
     {
         "categoria": "t-shirt",
+        "precio": "$90",
         "id": 1,
         "nombre": "T-Shirt Puma White",
         "texto": "A comfortable white Puma t-shirt for any occasion.",
@@ -8,6 +9,7 @@
     },
     {
         "categoria": "t-shirt",
+        "precio": "$85",
         "id": 2,
         "nombre": "T-Shirt Puma Black",
         "texto": "A comfortable black Puma t-shirt for any occasion.",
@@ -15,6 +17,7 @@
     },
     {
         "categoria": "t-shirt",
+        "precio": "$70",
         "id": 3,
         "nombre": "T-Shirt Topper Black",
         "texto": "A comfortable black Topper t-shirt for any occasion.",
@@ -22,6 +25,7 @@
     },
     {
         "categoria": "pant",
+        "precio": "$75",
         "id": 4,
         "nombre": "Pant Nike Trend",
         "texto": "A comfortable Nike pants for everyday use.",
@@ -29,6 +33,7 @@
     },
     {
         "categoria": "pant",
+        "precio": "$80",
         "id": 5,
         "nombre": "Pant Nike Black",
         "texto": "A comfortable black Nike pants for everyday use",
@@ -36,13 +41,15 @@
     },
     {
         "categoria": "pant",
+        "precio": "$70",
         "id": 6,
         "nombre": "Pant Fila Black",
-        "texto": "A Fila sports pants perfect for exercising..",
+        "texto": "A Fila sports pants perfect for exercising.",
         "img": "https://essential.vtexassets.com/arquivos/ids/1228451-800-auto?v=638386927219200000&width=800&height=auto&aspect=true"
     },
     {
         "categoria": "accesorie",
+        "precio": "$50",
         "id": 7,
         "nombre": "Cap Black",
         "texto": "A black cap to protect you from the sun with style.",
@@ -50,6 +57,7 @@
     },
     {
         "categoria": "accesorie",
+        "precio": "$45",
         "id": 8,
         "nombre": "Fanny Pack",
         "texto": "A practical fanny pack to carry your things.",

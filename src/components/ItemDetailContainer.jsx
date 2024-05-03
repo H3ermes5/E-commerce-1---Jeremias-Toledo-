@@ -1,5 +1,6 @@
 import  { useEffect, useState } from 'react';
 
+
 import Container from 'react-bootstrap/Container';
 import { useParams } from 'react-router-dom';
 import data from '../data/products.json';
@@ -19,8 +20,8 @@ export const ItemDetailContainer = () => {
         });
     }, [id]);
 
-    if(!product) return <div>Loading product...</div>;
-
+    if(!product) return <div className='loading'>Loading product...</div>;
+  
     return (
         <Container className='mt-4'> 
         <h1>{product.nombre}</h1>
