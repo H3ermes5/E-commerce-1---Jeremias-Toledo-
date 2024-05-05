@@ -8,6 +8,19 @@ span {
   padding: 5px;
 }
 
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border-left-color: #7d47ff;
+  
+  animation: spin 1s ease infinite;
+}
+
 .loading {
   font-size: 20px;
   position: fixed;
@@ -98,4 +111,14 @@ li{
 .description{
   font-weight: 500;
   font-size: 16px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
