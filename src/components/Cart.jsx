@@ -69,11 +69,11 @@ export const Cart = () => {
                     {items.map((item, index) => (
                         <tr key={item.id}>
                             <td>{index + 1}</td>
-                            <td>{item.title}</td>
-                            <td>{item.quantity}</td>
-                            <td>${item.price}</td>
-                            <td>${item.quantity * item.price}</td>
-                            <td><Image src={item.image} fluid style={{ width: '50px', height: 'auto' }} alt={item.title} /></td>
+                            <td className='tbody-weight'>{item.title}</td>
+                            <td className='tbody-weight'>{item.quantity}</td>
+                            <td className='tbody-weight'>${item.price}</td>
+                            <td className='tbody-weight'>${item.quantity * item.price}</td>
+                            <td><Image src={item.image} fluid style={{ width: '100px', height: 'auto' }} alt={item.title} /></td>
                             <td>
                                 <Button variant="danger" onClick={() => handleRemove(item.id)}>Remove</Button>
                             </td>
