@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 
 import { ItemList } from './ItemList';
 import { useParams } from 'react-router-dom';
-import data from '../data/products.json';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 export const ItemListContainer = () => {
@@ -13,10 +12,17 @@ export const ItemListContainer = () => {
     useEffect(() => {
     const db = getFirestore();
 
-    const refCollection = collection(db, "items");
+    let refCollection;
+
+    if (!id) {
+        refCollection = collection(db, "items");
+    } else {
+        refCollection = query(collection(db, "items"), 
+        where("category", "==", id))
+    }
 
     getDocs(refCollection).then((snapshot) => {
-        console.log();(
+        setProducts(
             snapshot.docs.map((doc) => {
                 return { id: doc.id, ...doc.data() };
             })
