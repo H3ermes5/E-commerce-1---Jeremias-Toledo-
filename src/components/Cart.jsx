@@ -1,4 +1,4 @@
-import { Container, Form, Button, Table } from 'react-bootstrap';
+import { Container, Form, Button, Table, Image } from 'react-bootstrap';
 import { useContext, useState } from 'react';
 import { CartContext } from '../contexts/CartContext';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
@@ -61,6 +61,7 @@ export const Cart = () => {
                         <th>Quantity</th>
                         <th>Price</th>
                         <th>Total</th>
+                        <th>Image</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -72,6 +73,7 @@ export const Cart = () => {
                             <td>{item.quantity}</td>
                             <td>${item.price}</td>
                             <td>${item.quantity * item.price}</td>
+                            <td><Image src={item.image} fluid style={{ width: '50px', height: 'auto' }} alt={item.title} /></td>
                             <td>
                                 <Button variant="danger" onClick={() => handleRemove(item.id)}>Remove</Button>
                             </td>
