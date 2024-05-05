@@ -80,7 +80,7 @@ export const Cart = () => {
                 <Form.Control type="email" value={values.email} name='email' onChange={handleChange} />
             </Form.Group>
             <Button variant="primary" type='button' onClick={ handleSubmit }>
-                Enviar
+            Send
             </Button>
         </Form>
     }
