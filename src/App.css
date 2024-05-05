@@ -50,6 +50,48 @@ span {
   width: 100%;
 }
 
+.button-empty{
+  margin-bottom: 10px;
+  width: 10%;
+  border-radius: 20px;
+}
+
+.btn-close{
+  cursor: pointer;
+}
+
+.list{
+  list-style: none;
+}
+
 .titulo{
   font-weight: 600;
+}
+
+li{
+  font-weight: 600;
+}
+
+.cant {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.title_prod{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.stock{
+  margin-bottom: 20px;
+}
+
+.price_two{
+  margin-bottom: 20px;
+}
+
+.description{
+  font-weight: 500;
+  font-size: 16px;
 }

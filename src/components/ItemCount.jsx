@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {  Button } from 'react-bootstrap';
 
 export const ItemCount = ({ onAdd, stock }) => {
     const [quantity, setQuantity] = useState(1);
@@ -17,12 +18,12 @@ export const ItemCount = ({ onAdd, stock }) => {
     };
 
     return ( <div className="d-flex">
-    <div style={{padding: "0 10px", color: "rgb(98, 0, 255)", fontWeight: 900}} 
+    <div className="cant" style={{padding: "0 10px", color: "rgb(98, 0, 255)", fontWeight: 900}} 
     onClick={handleDecrease}>-</div>
     <input type="number" value={quantity} readOnly/>
-    <div style={{padding: "0 10px", color: "rgb(98, 0, 255)", fontWeight: 900}} 
+    <div className="cant" style={{padding: "0 10px", color: "rgb(98, 0, 255)", fontWeight: 900}} 
     onClick={handleIncrease}>+</div>
-    <button type="button" onClick={handleAdd}>Add to cart</button>
+    <Button variant="primary" type="button" onClick={handleAdd}>Add to cart</Button>
     </div>
     );
 };
